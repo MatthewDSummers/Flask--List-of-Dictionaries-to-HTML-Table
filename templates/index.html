@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Untitled</title>
+        <meta name="description" content="More rendering to template">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div id="container">
+    {% if frequency %}
+        {% for x in range(0,frequency): %}
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Height</th>
+                    <th>Full Name</th>
+                </tr>
+
+            {% for person in chars_list: %}
+                <tr>
+                    <td class="color1">{{person['first_name']}}</td>
+                    <td class="color1">{{person['last_name']}}</td>
+                    <td class="color2">{{person['age']}}</td>
+                    <td class="color2">{{person['height']}}</td>
+                    <td class="color1">{{person['first_name']}} {{person['last_name']}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+
+        {% endfor %}
+
+    {% else %}
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Height</th>
+                    <th>Full Name</th>
+                </tr>
+
+            {% for person in chars_list: %}
+                <tr>
+                    <td class="color1">{{person['first_name']}}</td>
+                    <td class="color1">{{person['last_name']}}</td>
+                    <td class="color2">{{person['age']}}</td>
+                    <td class="color2">{{person['height']}}</td>
+                    <td class="color1">{{person['first_name']}} {{person['last_name']}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+
+    {% endif %}
+        </div>
+    </body>
+</html>

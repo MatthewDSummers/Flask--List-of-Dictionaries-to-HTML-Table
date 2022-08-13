@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    padding: 2rem;
+    background-color: hsl(0, 0%, 50%);
+    min-height: 100vh;
+}
+
+table{
+    width: 40rem;
+    margin-inline: auto;
+    margin-block: 1rem;
+    padding-block: 1rem;
+    background-color: hsl(255, 50%, 40%);
+}
+
+table, td, th{
+    border: 2px solid black;
+    padding: .75rem;
+}
+
+th{
+    background-color: hsl(0, 0%, 7%);
+    color: hsl(57, 99%, 63%);
+}
+
+td{
+    background-color: hsl(0, 0%, 100%);
+}
+
